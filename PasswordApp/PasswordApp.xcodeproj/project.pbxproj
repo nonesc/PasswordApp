@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		4691DF1C2E73BB2DAC5524C1 /* Pods_PasswordApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CC19ED4E3B753C19A9ABCA /* Pods_PasswordApp.framework */; };
 		B58EFD1C20A1712900B1A7D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58EFD1B20A1712900B1A7D8 /* AppDelegate.swift */; };
-		B58EFD1E20A1712900B1A7D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58EFD1D20A1712900B1A7D8 /* ViewController.swift */; };
 		B58EFD2120A1712900B1A7D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58EFD1F20A1712900B1A7D8 /* Main.storyboard */; };
 		B58EFD2320A1712A00B1A7D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58EFD2220A1712A00B1A7D8 /* Assets.xcassets */; };
 		B58EFD2620A1712A00B1A7D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58EFD2420A1712A00B1A7D8 /* LaunchScreen.storyboard */; };
 		B5BE3D6C20A18A83000D6065 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5BE3D6B20A18A83000D6065 /* GoogleService-Info.plist */; };
+		B5BE3D7220A1A044000D6065 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3D7020A1A044000D6065 /* LoginViewController.swift */; };
+		B5BE3D7320A1A044000D6065 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3D7120A1A044000D6065 /* LoginViewModel.swift */; };
+		B5BE3D7620A1A213000D6065 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3D7520A1A213000D6065 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +24,14 @@
 		A2C6B26B1DD2C86C4E0CD49E /* Pods-PasswordApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PasswordApp/Pods-PasswordApp.release.xcconfig"; sourceTree = "<group>"; };
 		B58EFD1820A1712900B1A7D8 /* PasswordApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58EFD1B20A1712900B1A7D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B58EFD1D20A1712900B1A7D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B58EFD2020A1712900B1A7D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B58EFD2220A1712A00B1A7D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B58EFD2520A1712A00B1A7D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B58EFD2720A1712A00B1A7D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5BE3D6B20A18A83000D6065 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B5BE3D7020A1A044000D6065 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B5BE3D7120A1A044000D6065 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B5BE3D7520A1A213000D6065 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,9 @@
 		B58EFD1A20A1712900B1A7D8 /* PasswordApp */ = {
 			isa = PBXGroup;
 			children = (
+				B5BE3D7420A1A204000D6065 /* Helper */,
+				B5BE3D6F20A1A02B000D6065 /* Scene */,
 				B58EFD1B20A1712900B1A7D8 /* AppDelegate.swift */,
-				B58EFD1D20A1712900B1A7D8 /* ViewController.swift */,
 				B58EFD1F20A1712900B1A7D8 /* Main.storyboard */,
 				B58EFD2220A1712A00B1A7D8 /* Assets.xcassets */,
 				B5BE3D6B20A18A83000D6065 /* GoogleService-Info.plist */,
@@ -89,6 +94,23 @@
 				B58EFD2720A1712A00B1A7D8 /* Info.plist */,
 			);
 			path = PasswordApp;
+			sourceTree = "<group>";
+		};
+		B5BE3D6F20A1A02B000D6065 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				B5BE3D7020A1A044000D6065 /* LoginViewController.swift */,
+				B5BE3D7120A1A044000D6065 /* LoginViewModel.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		B5BE3D7420A1A204000D6065 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B5BE3D7520A1A213000D6065 /* BaseViewController.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,12 +207,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PasswordApp/Pods-PasswordApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -224,8 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B58EFD1E20A1712900B1A7D8 /* ViewController.swift in Sources */,
+				B5BE3D7220A1A044000D6065 /* LoginViewController.swift in Sources */,
+				B5BE3D7620A1A213000D6065 /* BaseViewController.swift in Sources */,
 				B58EFD1C20A1712900B1A7D8 /* AppDelegate.swift in Sources */,
+				B5BE3D7320A1A044000D6065 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

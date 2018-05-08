@@ -8,4 +8,6 @@ target 'PasswordApp' do
   # Pods for PasswordApp
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'RxSwift',    '~> 4.0'
+pod 'RxCocoa',    '~> 4.0'
 end
