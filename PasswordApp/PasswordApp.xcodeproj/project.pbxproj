@@ -16,6 +16,7 @@
 		B5BE3D7220A1A044000D6065 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3D7020A1A044000D6065 /* LoginViewController.swift */; };
 		B5BE3D7320A1A044000D6065 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3D7120A1A044000D6065 /* LoginViewModel.swift */; };
 		B5BE3D7620A1A213000D6065 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3D7520A1A213000D6065 /* BaseViewController.swift */; };
+		B5BE3D7A20A1B4DE000D6065 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE3D7920A1B4DE000D6065 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B5BE3D7020A1A044000D6065 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B5BE3D7120A1A044000D6065 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B5BE3D7520A1A213000D6065 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B5BE3D7920A1B4DE000D6065 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +110,18 @@
 		B5BE3D7420A1A204000D6065 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B5BE3D7820A1B4B6000D6065 /* Extension */,
 				B5BE3D7520A1A213000D6065 /* BaseViewController.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		B5BE3D7820A1B4B6000D6065 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B5BE3D7920A1B4DE000D6065 /* String.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +217,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PasswordApp/Pods-PasswordApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -214,7 +227,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -252,6 +267,7 @@
 			files = (
 				B5BE3D7220A1A044000D6065 /* LoginViewController.swift in Sources */,
 				B5BE3D7620A1A213000D6065 /* BaseViewController.swift in Sources */,
+				B5BE3D7A20A1B4DE000D6065 /* String.swift in Sources */,
 				B58EFD1C20A1712900B1A7D8 /* AppDelegate.swift in Sources */,
 				B5BE3D7320A1A044000D6065 /* LoginViewModel.swift in Sources */,
 			);

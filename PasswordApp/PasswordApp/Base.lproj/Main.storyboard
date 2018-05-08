@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SpP-f2-P1x">
-                                <rect key="frame" x="20" y="248.5" width="335" height="170.5"/>
+                                <rect key="frame" x="20" y="244" width="335" height="180"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RMz-R8-UXH">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
@@ -33,23 +33,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4i-pM-k8b">
-                                        <rect key="frame" x="0.0" y="100" width="335" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erm-oJ-xGg">
+                                        <rect key="frame" x="144.5" y="100" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRq-XO-2QQ">
-                                        <rect key="frame" x="0.0" y="140.5" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="150" width="335" height="30"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="M4i-pM-k8b" firstAttribute="leading" secondItem="SpP-f2-P1x" secondAttribute="leading" id="4UL-dZ-OjR"/>
                                     <constraint firstAttribute="trailing" secondItem="RMz-R8-UXH" secondAttribute="trailing" id="I4R-qP-LUQ"/>
                                     <constraint firstAttribute="trailing" secondItem="HGg-l8-WAh" secondAttribute="trailing" id="IZ9-me-3xD"/>
                                     <constraint firstItem="ZRq-XO-2QQ" firstAttribute="leading" secondItem="SpP-f2-P1x" secondAttribute="leading" id="Rww-xK-MpS"/>
-                                    <constraint firstAttribute="trailing" secondItem="M4i-pM-k8b" secondAttribute="trailing" id="mrx-nt-FMh"/>
                                     <constraint firstAttribute="trailing" secondItem="ZRq-XO-2QQ" secondAttribute="trailing" id="neN-CB-v2y"/>
                                     <constraint firstItem="HGg-l8-WAh" firstAttribute="leading" secondItem="SpP-f2-P1x" secondAttribute="leading" id="pYT-jb-PIp"/>
                                     <constraint firstItem="RMz-R8-UXH" firstAttribute="leading" secondItem="SpP-f2-P1x" secondAttribute="leading" id="uNV-R0-Sfn"/>
@@ -65,6 +61,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="czk-do-7bW"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="RMz-R8-UXH" id="RCI-hL-s2T"/>
+                        <outlet property="loginButton" destination="ZRq-XO-2QQ" id="8FK-7i-jPC"/>
+                        <outlet property="passwordTextField" destination="HGg-l8-WAh" id="DP7-6A-UPa"/>
+                        <outlet property="registerButton" destination="Erm-oJ-xGg" id="PPR-Sc-NdF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

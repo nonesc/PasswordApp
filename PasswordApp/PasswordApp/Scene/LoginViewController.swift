@@ -10,8 +10,22 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class LoginViewController: BaseViewController {
 
+extension Optional where Wrapped == String {
+    func orEmpty() -> String{
+        if let strongSelf = self {
+            return strongSelf.isEmpty ? "" : strongSelf
+        }
+        return ""
+    }
+}
+class LoginViewController: BaseViewController {
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
     lazy var viewModel: LoginViewModelType = {
 		return LoginViewModel()
 	}()
@@ -20,24 +34,53 @@ class LoginViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindInputs()
+        bindOutputs()
 
         // Do any additional setup after loading the view.
     }
+    
+    func bindInputs() {
+        registerButton
+            .rx
+            .tap
+            .asDriver()
+            .drive(onNext: { [weak self] (_) in
+                self?.viewModel.inputs.registerButtonTapped()
+        }).disposed(by: disposeBag)
+        
+        loginButton
+            .rx
+            .tap
+            .asDriver()
+            .drive(onNext: { [weak self] (_) in
+                guard let `self` = self else { return }
+                self.viewModel.inputs.loginButtonTapped(email: self.emailTextField.text.orEmpty(), password: self.passwordTextField.text.orEmpty())
+            }).disposed(by: disposeBag)
+    }
+    
+    func bindOutputs() {
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
